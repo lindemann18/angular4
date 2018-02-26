@@ -1,11 +1,23 @@
 <div>
   <h1>nombre: {{titulo}}</h1>
 
-  <h3>Empleado estrella</h3>
-  <legend>{{empleado.nombre}}</legend>
-  <span>{{empleado.edad}}</span>
+  <button type="button" name="button" (click)="cambiarExterno()">Cambiar trabajador</button>
 
-  <div *ngFor="let emp of empleados">
-    <span>{{emp.nombre}}</span>
+  <div *ngIf="trabajador_externo">
+    <span>{{empleado.nombre}}</span>
+    <span>{{empleado.edad}}</span>
+    <span>{{empleado.cargo}}</span>
+    <span>{{empleado.contrato}}</span>
+  </div>
+
+  <h3>Listado de empleados</h3>
+  <div *ngIf="!trabajador_externo">
+    <div *ngFor="let emp of empleados" >
+      <span>{{emp.nombre}}</span>
+      <span>{{emp.edad}}</span>
+      <span>{{emp.cargo}}</span>
+      <span>{{emp.contrato}}</span>
+      <span *ngIf="emp.contratado">Contratado!</span>
+    </div>
   </div>
 </div>
