@@ -12,12 +12,35 @@
 
   <h3>Listado de empleados</h3>
   <div *ngIf="!trabajador_externo">
-    <div *ngFor="let emp of empleados" >
-      <span>{{emp.nombre}}</span>
-      <span>{{emp.edad}}</span>
-      <span>{{emp.cargo}}</span>
-      <span>{{emp.contrato}}</span>
-      <span *ngIf="emp.contratado">Contratado!</span>
-    </div>
+      <ul>
+        <li *ngFor="let emp of empleados" >
+          <span>{{emp.nombre}}</span>
+          <span>{{emp.edad}}</span>
+          <span>{{emp.cargo}}</span>
+          <span>{{emp.contrato}}</span>
+          <span *ngIf="emp.contratado">Contratado!</span>
+        </li>
+      </ul>
   </div>
 </div>
+
+<hr>
+
+<hr>
+<h3>two way data binding</h3>
+<button (click)="logColorSeleccionado()"></button>
+<input type="text" placeholder="color" [(ngModel)]="color_seleccionado"/>
+<!-- [class.bordeAzul]="color_seleccionado==='blue'" -->
+<pre [style.border]="color_seleccionado=='red' ? '2px solid black':'1px solid white'"
+[ngClass]="{bordeAzul:color_seleccionado=='blue',bordeVerde:color_seleccionado=='green'}">
+  <strong>color elegidp</strong>
+  {{color_seleccionado}}
+</pre>
+<div [ngStyle]="{'background':color_seleccionado,'width':'200px','height':'200px', 'float':'right','margin':'0 45% 0 0'}"></div>
+<div [ngStyle]="{'clear':'both'}"></div>
+
+<h3>Color switch</h3>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{background:color, 'color': 'white'}">red</li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{background:color, 'color': 'white'}">blue</li>
+</ul>
