@@ -7,7 +7,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class ContactoComponent {
   public titulo:string = 'Página Contacto';
-  public Parametro;
+  public Parametro:any;
 
   constructor(
     private _route: ActivatedRoute,
