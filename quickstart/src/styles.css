@@ -12,3 +12,11 @@ h1 {
 .bordeVerde {
   border: 2px solid lightgreen !important;
 }
+
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+  background: #ccc;
+  color: #fff;
+}

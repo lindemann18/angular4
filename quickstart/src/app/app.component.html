@@ -1,2 +1,9 @@
 <!-- <fruta></fruta> -->
-<empleado></empleado>
+<!-- <empleado></empleado> -->
+<nav>
+  <a [routerLink]="['/']" [routerLinkActive]="['active']">Hombre</a>
+  <a [routerLink]="['/fruta']" [routerLinkActive]="['active']">Fruta</a>
+  <a [routerLink]="['/empleado']" [routerLinkActive]="['active']">empleado</a>
+  <a [routerLink]="['/contacto']" [routerLinkActive]="['active']">Contacto</a>
+</nav>
+<router-outlet></router-outlet>
