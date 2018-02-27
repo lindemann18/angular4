@@ -12,9 +12,11 @@ export class HomeComponent {
   public prueba:string;
   public listado_ropa:Array<string>;
   public prenda_seleccionada:string;
+  public fecha:any;
+  public nombre:string = "JUAN lopez Martinez";
 
   constructor(private _ropaService:RopaService) {
-
+    this.fecha = new Date(2017,4,15);
   }
 
   ngOnInit() {
@@ -30,7 +32,7 @@ export class HomeComponent {
     this.prenda_seleccionada = "";
   }
 
-  eliminarPrenda(index) {
+  eliminarPrenda(index:any) {
     this._ropaService.deleteRopa(index);
   }
 }

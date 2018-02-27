@@ -9,6 +9,7 @@ import { FrutaComponent }  from './fruta/fruta.component';
 import { EmpleadoComponent }  from './empleado/empleado.component';
 import { ContactoComponent }  from './contacto/contacto.component';
 import { HomeComponent }  from './home/home.component';
+import {ConversorPipe} from './pipes/conversor.pipe';
 
 @NgModule({
   imports:      [ BrowserModule , FormsModule, HttpModule,routing],
@@ -18,6 +19,7 @@ import { HomeComponent }  from './home/home.component';
     EmpleadoComponent,
     HomeComponent,
     ContactoComponent,
+    ConversorPipe,
   ],
   providers:[appRoutingProviders],
   bootstrap:    [ AppComponent ]

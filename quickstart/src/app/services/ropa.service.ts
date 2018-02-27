@@ -5,11 +5,11 @@ export class RopaService {
   public nombre_prenda = "Pantalones vaqueros";
   public coleccion_ropa:Array<any> = [];
 
-    prueba(prenda) {
+    prueba(prenda:string) {
       return prenda;
     }
 
-    addRopa(nombre_prenda):Array <string> {
+    addRopa(nombre_prenda:string) {
       this.coleccion_ropa.push(nombre_prenda);
     }
 

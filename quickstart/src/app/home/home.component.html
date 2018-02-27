@@ -4,6 +4,11 @@
 <button type="button" (click)="agregarPrenda()">Agrega Ropa</button> <br>
 <span *ngIf="prenda_seleccionada">La prenda a guardar es: <strong>{{prenda_seleccionada}}</strong></span>
 <h3>Listado de prendas de ropa</h3>
+{{this.fecha | date:'dd/MM/yyyy'}}
+{{this.fecha | date:'fullDate' | uppercase}}
+{{nombre | lowercase}}
+<br>
+{{5|conversor:7}}
 <ul>
     <li *ngFor="let prenda of listado_ropa; let i = index">
       {{prenda}}
