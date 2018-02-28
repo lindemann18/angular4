@@ -27,7 +27,10 @@ export class CochesComponent {
   ngOnInit() {
     this._peticionesService.getArticulos().subscribe(
       result => {
-        articulos = result;
+        this.articulos = result;
+        if(!this.articulos) {
+          console.log('Error en el servidor');
+        }
       },
       error => {
         console.log(error);

@@ -34,3 +34,11 @@
     <li>{{coche.color}}</li>
   </ul>
 </div>
+
+<div>
+       <h4>Listado de articulos</h4>
+     <ul *ngIf="this.articulos">
+       <li *ngFor="let article of articulos" >{{article.title}}</li>
+     </ul>
+     <span *ngIf="!this.articulos">Cargando...</span>
+ </div>
