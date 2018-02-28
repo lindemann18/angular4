@@ -11,6 +11,7 @@ import { ContactoComponent }  from './contacto/contacto.component';
 import { HomeComponent }  from './home/home.component';
 import {ConversorPipe} from './pipes/conversor.pipe';
 import { CochesComponent }  from './coches/coches.component';
+import { PlantillasComponent } from './plantillas/plantillas.component';
 
 @NgModule({
   imports:      [ BrowserModule , FormsModule, HttpModule,routing],
@@ -22,6 +23,7 @@ import { CochesComponent }  from './coches/coches.component';
     ContactoComponent,
     ConversorPipe,
     CochesComponent,
+    PlantillasComponent,
   ],
   providers:[appRoutingProviders],
   bootstrap:    [ AppComponent ]
