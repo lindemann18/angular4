@@ -10,6 +10,7 @@ import { EmpleadoComponent }  from './empleado/empleado.component';
 import { ContactoComponent }  from './contacto/contacto.component';
 import { HomeComponent }  from './home/home.component';
 import {ConversorPipe} from './pipes/conversor.pipe';
+import { CochesComponent }  from './coches/coches.component';
 
 @NgModule({
   imports:      [ BrowserModule , FormsModule, HttpModule,routing],
@@ -20,6 +21,7 @@ import {ConversorPipe} from './pipes/conversor.pipe';
     HomeComponent,
     ContactoComponent,
     ConversorPipe,
+    CochesComponent,
   ],
   providers:[appRoutingProviders],
   bootstrap:    [ AppComponent ]
