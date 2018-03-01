@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+.active {
+  text-decoration: none !important;
+  background: #E03137;
+  border-bottom: 2px solid #eee;
+}

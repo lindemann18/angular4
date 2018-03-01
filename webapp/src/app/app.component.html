@@ -1,0 +1,22 @@
+<div id="content" class="col-lg-10 offset-lg-1">
+  <header id="header" class="col-lg-12">
+      <h1>{{title}}</h1>
+  </header>
+  <nav id="nav" class="col-lg-12">
+    <ul>
+      <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a></li>
+      <li><a [routerLink]="['/productos']" [routerLinkActive]="['active']">Productos</a></li>
+      <li><a [routerLink]="['/crearproductos']" [routerLinkActive]="['active']">Crear Producto</a></li>
+    </ul>
+  </nav>
+
+  <section id="main" class="col-lg-12">
+    <!-- Componente Actual -->
+    <router-outlet></router-outlet>
+    {{this.header_color}}
+  </section>
+
+  <footer class="col-lg-12" id="footer">
+    <p>Curso de Angular 4 - Chuvakovich</p>
+  </footer>
+</div>
