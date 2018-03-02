@@ -7,17 +7,18 @@ import { GLOBAL } from '../../services/global';
 @Component({
   selector: 'producto-detail',
   templateUrl: './producto-detail.component.html',
-  styleUrls:['./producto-detail.component.css']
+  styleUrls:['./producto-detail.component.css'],
+  providers: [ProductoService],
 })
 
-export class ErrorComponent {
-  public titulo:string;
+export class ProductoDetailComponent {
+  public producto:Producto;
 
   constructor(private _productoService:ProductoService, private _route: ActivatedRoute, private _router:Router) {
-    this.titulo = "Detalle producto";
+
   }
 
   ngOnInit() {
-    console.log("Componente error.component.ts");
+    console.log("Componente producto-detail.component.ts");
   }
 }
