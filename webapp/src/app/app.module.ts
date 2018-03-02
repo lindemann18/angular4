@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from  './components/home/home.component';
 import { ErrorComponent } from  './components/error/error.component';
 import { ProductosListComponent } from  './components/productos-list/productos-list.component';
+import { ProductoAddComponent } from './components/producto-add/producto-add.component';
 
 // Rutas
 import { routing, appRoutingProviders } from './app.routing';
@@ -19,6 +20,7 @@ import { routing, appRoutingProviders } from './app.routing';
     HomeComponent,
     ErrorComponent,
     ProductosListComponent,
+    ProductoAddComponent,
   ],
   imports: [
     BrowserModule,
