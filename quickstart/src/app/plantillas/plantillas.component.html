@@ -17,3 +17,11 @@
       <strong>No eres el administrador de la webapp</strong>
   </div>
 </ng-template>
+
+
+<componente-hijo
+  [propiedad_uno]="propiedad_uno"
+  [texto]="propiedad_dos"
+  [web] = "identity"
+  (desde_el_hijo)="recibirDatos($event)"
+></componente-hijo>

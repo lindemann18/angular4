@@ -12,6 +12,7 @@ import { HomeComponent }  from './home/home.component';
 import {ConversorPipe} from './pipes/conversor.pipe';
 import { CochesComponent }  from './coches/coches.component';
 import { PlantillasComponent } from './plantillas/plantillas.component';
+import { HijoComponent } from './hijo/hijo.component';
 
 @NgModule({
   imports:      [ BrowserModule , FormsModule, HttpModule,routing],
@@ -24,6 +25,7 @@ import { PlantillasComponent } from './plantillas/plantillas.component';
     ConversorPipe,
     CochesComponent,
     PlantillasComponent,
+    HijoComponent,
   ],
   providers:[appRoutingProviders],
   bootstrap:    [ AppComponent ]
