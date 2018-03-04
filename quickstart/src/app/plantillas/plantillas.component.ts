@@ -9,6 +9,7 @@ export class PlantillasComponent {
   public administrador:any;
   public propiedad_uno:string;
   public propiedad_dos:string;
+  public datos_del_hijo:any
   public identity = {
     id: 1,
     web: 'ashernetz.com',
@@ -24,6 +25,7 @@ export class PlantillasComponent {
 
   recibirDatos(e:any){
     console.log(e);
+    this.datos_del_hijo = e;
   }
 
 }

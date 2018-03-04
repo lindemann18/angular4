@@ -25,3 +25,7 @@
   [web] = "identity"
   (desde_el_hijo)="recibirDatos($event)"
 ></componente-hijo>
+
+<div *ngIf="datos_del_hijo && datos_del_hijo.nombre">
+  <h1>{{datos_del_hijo.nombre}}</h1>
+</div>
