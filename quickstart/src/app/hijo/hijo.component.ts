@@ -16,6 +16,10 @@ export class HijoComponent {
     this.titulo        = "Componente Hijo";
   }
 
+  ngOnInit() {
+    //enviar();
+  }
+
   enviar(e:any) {
     this.desde_el_hijo.emit({
       nombre: 'chuvakovich'
