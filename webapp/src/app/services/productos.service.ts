@@ -28,6 +28,22 @@ export class ProductoService {
       .map( res => res.json());
     }
 
+    getProducto(id:number) {
+      return this._http.get(this.url+"producto/"+id).map(res=>res.json());
+    }
+
+    editProducto(id:number, producto:Producto) {
+      let json = JSON.stringify(producto);
+      let params = "json="+json;
+      let headers = new Headers({'Content-Type':'application/x-www-form-urlencoded'});
+      return this._http.post(this.url+'update-producto/'+id, params, {headers: headers})
+      .map( res => res.json());
+    }
+
+    deleteProducto(id:number) {
+      return this._http.get(this.url+'delete-producto/'+id).map( res => res.json());
+    }
+
     makeFileRequest(url:string, params: Array<string>, files: Array<File>) {
       console.log('wut');
       return new Promise((resolve, reject)=> {

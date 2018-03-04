@@ -10,6 +10,7 @@ import { ErrorComponent }          from  './components/error/error.component';
 import { ProductosListComponent }  from  './components/productos-list/productos-list.component';
 import { ProductoAddComponent }    from './components/producto-add/producto-add.component';
 import { ProductoDetailComponent } from './components/producto-detail/producto-detail.component';
+import { ProductoEditComponent }   from './components/producto-edit/producto-edit.component';
 
 // Rutas
 import { routing, appRoutingProviders } from './app.routing';
@@ -23,6 +24,7 @@ import { routing, appRoutingProviders } from './app.routing';
     ProductosListComponent,
     ProductoAddComponent,
     ProductoDetailComponent,
+    ProductoEditComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,19 @@
 #form-producto {
-
+  display: inline-block;
+  float: left;
+  overflow: hidden;
 }
 
 #form-producto label {
   margin-top: 10px;
+}
+
+.imagen_producto {
+  margin: 0 auto;
+  float: right;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
 }

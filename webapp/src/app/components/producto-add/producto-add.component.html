@@ -1,6 +1,6 @@
 {{titulo}}
 
-<form #formProducto="ngForm" class="form col-lg-6 offset-lg-3" id="form-producto"
+<form #formProducto="ngForm" class="form col-lg-6 offset-lg-2" id="form-producto"
 (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="">
@@ -35,3 +35,7 @@
 
   <button type="submit" class="btn btn-success" [disabled]="!formProducto.form.valid">{{titulo}}</button>
 </form>
+
+<div class="col-lg-3 imagen_producto" *ngIf="is_edit">
+  <img src="http://ashernetz.com/backend/uploads/{{producto.imagen}}" alt="">
+</div>

@@ -1,1 +1,12 @@
-<h1>-detalle del producto</h1>
+<h1>detalle del producto</h1>
+<span *ngIf="!producto">Cargando...</span>
+<div *ngIf="producto" id="producto" class="row">
+    <div class="col-lg-3 pull-right" *ngIf="producto.imagen">
+      <img src="http://ashernetz.com/backend/uploads/{{producto.imagen}}" alt="">
+    </div>
+    <div class="col-lg-9 pull-left">
+      <h3>{{producto.nombre}}</h3>
+      <p><strong>{{producto.precio}}</strong></p>
+      <p>{{producto.descripcion}}</p>
+    </div>
+</div>

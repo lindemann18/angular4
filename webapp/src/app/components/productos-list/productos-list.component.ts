@@ -13,6 +13,7 @@ import { Producto } from '../../models/producto.model';
 export class ProductosListComponent {
   public titulo:string;
   public productos: Array<Producto>;
+  public confirmado:any;
 
   constructor(
     private _route: ActivatedRoute,
@@ -24,11 +25,38 @@ export class ProductosListComponent {
 
   ngOnInit() {
     console.log("Componente productos-list.component.ts");
+    this.getProductos();
+  }
+
+  getProductos() {
     this._productoService.getProductos().subscribe(
       result => {
         if (result.code === 200){
             this.productos = result.data;
             console.log(this.productos);
+        }else {
+          console.log("error");
+        }
+      },
+      error =>{
+          console.log(error);
+      }
+    );
+  }
+
+  borrarConfirm(id) {
+    this.confirmado = id;
+  }
+
+  cancelarConfirm() {
+    this.confirmado = null;
+  }
+
+  borrarProducto(id:number) {
+    this._productoService.deleteProducto(id).subscribe(
+      result => {
+        if (result.code === 200){
+            this.getProductos();
         }else {
           console.log("error");
         }

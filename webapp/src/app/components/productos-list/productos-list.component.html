@@ -13,14 +13,19 @@
         <div class="" *ngIf="!producto.imagen">
           <div class="img-relleno"></div>
         </div>
-        <div class="caption">
+        <div class="caption" >
           <h3>{{producto.nombre}}</h3>
           <p>{{producto.precio}}</p>
-          <p>
-              <a href="" class="btn btn-primary btn-md" [routerLink]="['/producto', producto.id]">Ver</a>
-              <a href="" class="btn btn-warning btn-md">Editar</a>
-              <a href="" class="btn btn-danger btn-md">Borrar</a>
-          </p>
+              <div class="botones" *ngIf="confirmado != producto.id">
+                <a href="" class="btn btn-primary btn-md" [routerLink]="['/producto', producto.id]">Ver</a>
+                <a href="" class="btn btn-warning btn-md" [routerLink]="['/producto-edit', producto.id]">Editar</a>
+                <a class="btn btn-danger btn-md" (click)="borrarConfirm(producto.id)">Borrar</a>
+              </div>
+              <div class="seguro" *ngIf="confirmado == producto.id">
+                <p>Está seguro de borrar el producto? </p>
+                  <a class="btn btn-danger btn-md" (click)="borrarProducto(producto.id)">Si</a>
+                  <a class="btn btn-primary btn-md" (click)="cancelarConfirm()">No</a>
+              </div>
         </div>
       </div>
     </div>
